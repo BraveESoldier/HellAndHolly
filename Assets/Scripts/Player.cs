@@ -2,33 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent (typeof(Animator))]
 public class Player : CharacterBase
 {
     [SerializeField] private int _health;
-    [SerializeField] private float _speed;
     [SerializeField] private string _name;
     [SerializeField] private Joystick _stick;
 
-    private Animator _animator;
-    private Rigidbody2D _rb;
+    private string direction;
 
-    //public Player()
-    //{
-    //    Health = _health;
-    //    Speed = _speed;
-    //    Name = _name;
-    //}
+    private Animator _animator;
+    private PlayerMovementLogic PML;
+    private PlayerCombatLogic PCL;
+   
+
 
     private void Start()
     {
         Health = _health;
-        Speed = _speed;
         Name = _name;
 
         _animator = GetComponent<Animator>();
-        _rb = GetComponent<Rigidbody2D>();
+        PML = GetComponent<PlayerMovementLogic>();
+        PCL = GetComponent<PlayerCombatLogic>();
         Debug.Log(Name);
     }
 
@@ -42,14 +38,16 @@ public class Player : CharacterBase
         Vector2 forceStick = _stick.Direction.normalized;
         if (forceStick != Vector2.zero)
         {
-            _rb.velocity = forceStick * Speed;
+            IsMoving = true;
+            PML.Move(forceStick);
 
-            // Установка направление анимации
-            SetAnimationDirection(forceStick);
+            // Установка направлениz
+            SetDirection(forceStick);
+            SetAnimation();
         }
         else
         {
-            _rb.velocity = Vector2.zero;
+            PML.Move(Vector2.zero);
             IsMoving = false;
         }
     }
@@ -58,7 +56,16 @@ public class Player : CharacterBase
     {
 
     }
-    public void SetAnimationDirection(Vector2 direction)
+
+    public void SetAnimation()
+    {
+        string currentAnim;
+        if (isMoving == true)
+            {   currentAnim = "Walk" + direction;
+                _animator.Play(currentAnim);
+            }
+    }
+    public void SetDirection(Vector2 force)
     {
         //if (direction == Vector2.zero)
         //{
@@ -66,27 +73,23 @@ public class Player : CharacterBase
         //    return;
         //}
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(force.y, force.x) * Mathf.Rad2Deg;
 
         if (angle > -45 && angle <= 45)
         {
-            IsMoving = true;
-            _animator.Play("WalkRight");
+            direction = "Right";
         }
         else if (angle > 45 && angle <= 135)
         {
-            IsMoving = true;
-            _animator.Play("WalkUp");
+            direction = "Up";
         }
         else if (angle > 135 || angle <= -135)
         {
-            IsMoving = true;
-            _animator.Play("WalkLeft");
+            direction = "Left";
         }
         else
         {
-            IsMoving = true;
-            _animator.Play("WalkDown");
+            direction = "Down";
         }
     }
 

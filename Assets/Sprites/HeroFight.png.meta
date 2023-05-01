@@ -1,0 +1,979 @@
+fileFormatVersion: 2
+guid: 078402087a99d5e4aa5bce3d29172ca1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroFight_0
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 3474
+        width: 331
+        height: 1098
+      alignment: 9
+      pivot: {x: 0.55135196, y: 0.4879595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72868433cd1609245b613a60d0d0c42c
+      internalID: -178739973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_1
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 3473
+        width: 305
+        height: 1111
+      alignment: 9
+      pivot: {x: 0.611459, y: 0.4660016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230e258685cdda44c850884652f0e286
+      internalID: 426744523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_2
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 3481
+        width: 566
+        height: 973
+      alignment: 9
+      pivot: {x: 0.35651842, y: 0.5310563}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b9cb58b2c8c0a44b6f52dcc418521f
+      internalID: -644363658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_3
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 3466
+        width: 495
+        height: 1123
+      alignment: 9
+      pivot: {x: 0.706031, y: 0.45795608}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9987d6c103d2e246961c589c4b77f33
+      internalID: 1492344289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_4
+      rect:
+        serializedVersion: 2
+        x: 3212
+        y: 3466
+        width: 561
+        height: 1074
+      alignment: 9
+      pivot: {x: 0.7694425, y: 0.5035107}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe61e04585e35c44bdf7d9995e29445
+      internalID: 2116266126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 3490
+        width: 524
+        height: 877
+      alignment: 9
+      pivot: {x: 0.4927915, y: 0.60121423}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09586a8c73d901541bf808d72c1a9056
+      internalID: -874316992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_12
+      rect:
+        serializedVersion: 2
+        x: 2124
+        y: 3457
+        width: 404
+        height: 866
+      alignment: 9
+      pivot: {x: 0.523374, y: 0.5959574}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605114132c2d91846bd2214b77fc2a6a
+      internalID: -1782903595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_13
+      rect:
+        serializedVersion: 2
+        x: 4020
+        y: 3478
+        width: 724
+        height: 933
+      alignment: 9
+      pivot: {x: 0.20528921, y: 0.57084817}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0cb42e273457f544827ff36f83d37b6
+      internalID: -1490755549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_14
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 4002
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4245c625361f694fbf610b51b5dedbd
+      internalID: -620331322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_17
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 2440
+        width: 356
+        height: 977
+      alignment: 9
+      pivot: {x: 0.57124686, y: 0.47803333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f95d81116213214c838c8d89beb5fcc
+      internalID: 1452343471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_19
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 2443
+        width: 696
+        height: 956
+      alignment: 9
+      pivot: {x: 0.1832321, y: 0.51428634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae865a3eacff4d4784402af6e16afbb
+      internalID: 190229098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_21
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 2480
+        width: 356
+        height: 910
+      alignment: 9
+      pivot: {x: 0.5657664, y: 0.46355167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77489076bfbb4841868ce760949be2e
+      internalID: 527906986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_22
+      rect:
+        serializedVersion: 2
+        x: 4603
+        y: 2199
+        width: 310
+        height: 1184
+      alignment: 9
+      pivot: {x: 0.5333134, y: 0.5837312}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58024820139d334686233d51fac94a9
+      internalID: 2071012509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_24
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2423
+        width: 493
+        height: 821
+      alignment: 9
+      pivot: {x: 0.5614503, y: 0.5838639}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320e7158ad5209948ba6f451cec350d3
+      internalID: 916371361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_26
+      rect:
+        serializedVersion: 2
+        x: 2435
+        y: 2460
+        width: 650
+        height: 850
+      alignment: 9
+      pivot: {x: 0.1878294, y: 0.58263385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86188a782cb9554c8c777abb8639104
+      internalID: 81477254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_27
+      rect:
+        serializedVersion: 2
+        x: 3131
+        y: 2414
+        width: 784
+        height: 824
+      alignment: 9
+      pivot: {x: 0.7846337, y: 0.573265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2713774823fde3f47bd439bbc4e3c8bd
+      internalID: -1140646481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_29
+      rect:
+        serializedVersion: 2
+        x: 4049
+        y: 2387
+        width: 369
+        height: 948
+      alignment: 9
+      pivot: {x: 0.57836187, y: 0.49128562}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65fdddfe4e45604c9bde3fdb79c1731
+      internalID: -1528847226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_31
+      rect:
+        serializedVersion: 2
+        x: 2431
+        y: 2963
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa19c19a834e69449dc9296516e9f91
+      internalID: 1731471893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_36
+      rect:
+        serializedVersion: 2
+        x: 4598
+        y: 2682
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59ddb185e5e3b24e8327804e58ef234
+      internalID: 1925342699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_38
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1193
+        width: 379
+        height: 984
+      alignment: 9
+      pivot: {x: 0.40500838, y: 0.42297426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7325b53ddbbe843b193e61e0366881
+      internalID: 678844190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_40
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 1188
+        width: 439
+        height: 942
+      alignment: 9
+      pivot: {x: 0.34029895, y: 0.44568947}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45c00c17dd3994409ff2f133944c9e0
+      internalID: -1383179894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_41
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 1234
+        width: 651
+        height: 805
+      alignment: 9
+      pivot: {x: 0.82599187, y: 0.56590676}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6da7df047fdce2d449b3f02ffc883309
+      internalID: -1091072702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_42
+      rect:
+        serializedVersion: 2
+        x: 3128
+        y: 1188
+        width: 828
+        height: 867
+      alignment: 9
+      pivot: {x: 0.17525905, y: 0.52232945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c080a4d9e0301f4b9e6ae514162abdf
+      internalID: -920397431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_44
+      rect:
+        serializedVersion: 2
+        x: 4066
+        y: 1154
+        width: 281
+        height: 940
+      alignment: 9
+      pivot: {x: 0.4923439, y: 0.4702507}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f4dcab566a42540b49e9be43772d56
+      internalID: -1640298692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_49
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1198
+        width: 493
+        height: 754
+      alignment: 9
+      pivot: {x: 0.45387822, y: 0.5452343}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137d08b0d3f962a4b9c85d69aa003396
+      internalID: 1521686453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_50
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 1264
+        width: 566
+        height: 715
+      alignment: 9
+      pivot: {x: 0.7979495, y: 0.6378053}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1126588179ad84c8db16b8aa8ec1e2
+      internalID: -572584936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_51
+      rect:
+        serializedVersion: 2
+        x: 4576
+        y: 1183
+        width: 266
+        height: 630
+      alignment: 9
+      pivot: {x: 0.4919103, y: 0.6673057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f987033073dbb94c902375a1b35a0b2
+      internalID: 976136457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_52
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 70
+        width: 559
+        height: 1074
+      alignment: 9
+      pivot: {x: 0.18830426, y: 0.5181435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77c006e21b1bc54c995544b5ffbbcc6
+      internalID: 1738853479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_56
+      rect:
+        serializedVersion: 2
+        x: 4037
+        y: 99
+        width: 244
+        height: 957
+      alignment: 9
+      pivot: {x: 0.4647357, y: 0.51348627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7aa4b8f7723f874599f215418efff9f
+      internalID: 511650403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_58
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 158
+        width: 715
+        height: 827
+      alignment: 9
+      pivot: {x: 0.77377415, y: 0.64565957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518dad37259d49747aa1af7e8f6eb622
+      internalID: 1907978296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_59
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 106
+        width: 373
+        height: 860
+      alignment: 9
+      pivot: {x: 0.563436, y: 0.61005527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e170e7e01ce3804e9ade15c05a75094
+      internalID: -185819010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_60
+      rect:
+        serializedVersion: 2
+        x: 2097
+        y: 964
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f41862e25ebf84b9d397264fb7cb09
+      internalID: -800633701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_61
+      rect:
+        serializedVersion: 2
+        x: 2423
+        y: 123
+        width: 457
+        height: 852
+      alignment: 9
+      pivot: {x: 0.6317948, y: 0.58836585}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8cc606d838cff4db00e729b082c4a7
+      internalID: -372036157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_62
+      rect:
+        serializedVersion: 2
+        x: 3021
+        y: 133
+        width: 474
+        height: 833
+      alignment: 9
+      pivot: {x: 0.6633728, y: 0.5697227}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f20810b5cba2fd44a96b21cdcab2c9e0
+      internalID: -1872487143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_63
+      rect:
+        serializedVersion: 2
+        x: 3605
+        y: 104
+        width: 326
+        height: 943
+      alignment: 9
+      pivot: {x: 0.37462854, y: 0.52509195}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c29c7dc05eefcdf43ab204709cbf0857
+      internalID: 1628094759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_64
+      rect:
+        serializedVersion: 2
+        x: 4271
+        y: 280
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f5355263dda8c46a5e2483ca790ff6
+      internalID: -461120761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFight_65
+      rect:
+        serializedVersion: 2
+        x: 4413
+        y: 126
+        width: 408
+        height: 812
+      alignment: 9
+      pivot: {x: 0.48418233, y: 0.6059646}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df723634fa63b134ea21c1fa00abc01e
+      internalID: 2120840336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9a24d734427704f40a481b56e7f3affa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HeroFight_38: 678844190
+      HeroFight_62: -372036157
+      HeroFight_56: 1073966605
+      HeroFight_44: -1804845063
+      HeroFight_28: 1237122532
+      HeroFight_41: -1091072702
+      HeroFight_45: -1640298692
+      HeroFight_43: 1275356765
+      HeroFight_0: -178739973
+      HeroFight_11: -1219288927
+      HeroFight_52: 976136457
+      HeroFight_49: -70868841
+      HeroFight_60: -185819010
+      HeroFight_65: -461120761
+      HeroFight_17: 1452343471
+      HeroFight_55: -786566710
+      HeroFight_53: 1738853479
+      HeroFight_13: -1490755549
+      HeroFight_15: -734709012
+      HeroFight_35: 93590773
+      HeroFight_48: -842315641
+      HeroFight_63: -1872487143
+      HeroFight_21: 527906986
+      HeroFight_51: -572584936
+      HeroFight_27: -1140646481
+      HeroFight_31: 1731471893
+      HeroFight_50: 1521686453
+      HeroFight_23: 237429089
+      HeroFight_59: 1907978296
+      HeroFight_24: 916371361
+      HeroFight_58: -828949097
+      HeroFight_64: 1628094759
+      HeroFight_5: 2120840336
+      HeroFight_57: 511650403
+      HeroFight_61: -800633701
+      HeroFight_4: 2116266126
+      HeroFight_46: -743008168
+      HeroFight_32: -292701107
+      HeroFight_2: -644363658
+      HeroFight_26: 81477254
+      HeroFight_8: -1922046065
+      HeroFight_30: 827088820
+      HeroFight_9: -874316992
+      HeroFight_18: 1970505906
+      HeroFight_47: -206599731
+      HeroFight_6: 1621487395
+      HeroFight_12: -1782903595
+      HeroFight_14: -620331322
+      HeroFight_34: -267496882
+      HeroFight_40: -1383179894
+      HeroFight_54: 466021940
+      HeroFight_42: -920397431
+      HeroFight_1: 426744523
+      HeroFight_3: 1492344289
+      HeroFight_10: -180677981
+      HeroFight_19: 190229098
+      HeroFight_29: -1528847226
+      HeroFight_20: 2062286372
+      HeroFight_33: 20361955
+      HeroFight_39: -202048694
+      HeroFight_36: 1925342699
+      HeroFight_22: 2071012509
+      HeroFight_37: 74087976
+      HeroFight_25: -1198904724
+      HeroFight_16: -213033779
+      HeroFight_7: 231761124
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

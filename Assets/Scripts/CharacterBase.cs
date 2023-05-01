@@ -17,11 +17,6 @@ public abstract class CharacterBase : MonoBehaviour, ICharacter, ICombatant, IMo
         get { return name; }
         set { name = value; }
     }
-    public float Speed 
-    {
-        get { return speed; }
-        set { speed = value; }
-    }
     public bool IsMoving 
     {
         get { return isMoving; }
@@ -29,7 +24,6 @@ public abstract class CharacterBase : MonoBehaviour, ICharacter, ICombatant, IMo
     }
 
     protected int health;
-    protected float speed;
     protected bool isMoving;
     protected bool isDead;
     protected string name;
@@ -55,7 +49,6 @@ public interface ICharacter
 
 public interface IMoving
 {
-    float Speed { get; }
     bool IsMoving { get; }
     void Movement();
 
