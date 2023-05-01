@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent (typeof(Animator))]
 public class Player : CharacterBase
@@ -10,11 +12,11 @@ public class Player : CharacterBase
     [SerializeField] private Joystick _stick;
 
     private string direction;
+    private bool isCanMoving = true;
 
     private Animator _animator;
     private PlayerMovementLogic PML;
     private PlayerCombatLogic PCL;
-   
 
 
     private void Start()
@@ -36,19 +38,23 @@ public class Player : CharacterBase
     public override void Movement()
     {
         Vector2 forceStick = _stick.Direction.normalized;
-        if (forceStick != Vector2.zero)
+        if(isCanMoving == true)
         {
-            IsMoving = true;
-            PML.Move(forceStick);
+            if (forceStick != Vector2.zero)
+            {
+                IsMoving = true;
+                PML.Move(forceStick);
 
-            // Установка направлениz
-            SetDirection(forceStick);
-            SetAnimation();
-        }
-        else
-        {
-            PML.Move(Vector2.zero);
-            IsMoving = false;
+                // Установка направлениz
+                SetDirection(forceStick);
+                // Установка анимации направления
+                SetAnimation();
+            }
+            else
+            {
+                PML.Move(Vector2.zero);
+                IsMoving = false;
+            }
         }
     }
 
@@ -61,10 +67,36 @@ public class Player : CharacterBase
     {
         string currentAnim;
         if (isMoving == true)
-            {   currentAnim = "Walk" + direction;
-                _animator.Play(currentAnim);
-            }
+        {
+            currentAnim = "Walk" + direction;
+            _animator.Play(currentAnim);
+        }
+        else 
+        {
+            currentAnim = "Walk" + direction; //Change na STAY
+            _animator.Play(currentAnim);
+        }
     }
+
+    public void SetAnimation(string hitVersion)
+    {
+        isCanMoving = false;
+        string currentAnim = hitVersion + direction;
+        _animator.Play(currentAnim);
+
+        StartCoroutine(OnAnimationEnd());
+    }
+
+    IEnumerator OnAnimationEnd() //Cour for understanding about end amin
+    {
+        yield return new WaitForSeconds(0.5f); //Костыль надо вернуть время анимации чтобы корутина была универсальной
+
+        isCanMoving = true;
+        SetAnimation();
+        PCL.EndAtack();
+        //yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo(0).length);
+    }
+
     public void SetDirection(Vector2 force)
     {
         //if (direction == Vector2.zero)
@@ -93,8 +125,19 @@ public class Player : CharacterBase
         }
     }
 
+
     private void FixedUpdate()
     {
         Movement();
+    }
+
+    private void OnEnable()
+    {
+        PlayerCombatLogic.onAttack += SetAnimation;
+    }
+
+    private void OnDisable()
+    {
+        PlayerCombatLogic.onAttack -= SetAnimation;
     }
 }

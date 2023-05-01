@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HeroFight_0
+      name: HitRight1
       rect:
         serializedVersion: 2
         x: 698
@@ -140,7 +140,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_1
+      name: HitRight2
       rect:
         serializedVersion: 2
         x: 1115
@@ -161,7 +161,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_2
+      name: HitRight3
       rect:
         serializedVersion: 2
         x: 1503
@@ -182,7 +182,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_3
+      name: HitRight5
       rect:
         serializedVersion: 2
         x: 2628
@@ -203,7 +203,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_4
+      name: HitRight6
       rect:
         serializedVersion: 2
         x: 3212
@@ -224,7 +224,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_9
+      name: HitRightStart
       rect:
         serializedVersion: 2
         x: 48
@@ -245,7 +245,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_12
+      name: HitRight4
       rect:
         serializedVersion: 2
         x: 2124
@@ -266,7 +266,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_13
+      name: HitRight7
       rect:
         serializedVersion: 2
         x: 4020
@@ -287,28 +287,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_14
-      rect:
-        serializedVersion: 2
-        x: 696
-        y: 4002
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4245c625361f694fbf610b51b5dedbd
-      internalID: -620331322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HeroFight_17
+      name: HitDown1
       rect:
         serializedVersion: 2
         x: 649
@@ -329,7 +308,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_19
+      name: HitDown3
       rect:
         serializedVersion: 2
         x: 1659
@@ -350,7 +329,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_21
+      name: HitDown2
       rect:
         serializedVersion: 2
         x: 1139
@@ -371,7 +350,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_22
+      name: HitDown7
       rect:
         serializedVersion: 2
         x: 4603
@@ -392,7 +371,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_24
+      name: HitDownStart
       rect:
         serializedVersion: 2
         x: 38
@@ -413,7 +392,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_26
+      name: HitDown4
       rect:
         serializedVersion: 2
         x: 2435
@@ -434,7 +413,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_27
+      name: HitDown5
       rect:
         serializedVersion: 2
         x: 3131
@@ -455,7 +434,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_29
+      name: HitDown6
       rect:
         serializedVersion: 2
         x: 4049
@@ -476,49 +455,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_31
-      rect:
-        serializedVersion: 2
-        x: 2431
-        y: 2963
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6aa19c19a834e69449dc9296516e9f91
-      internalID: 1731471893
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HeroFight_36
-      rect:
-        serializedVersion: 2
-        x: 4598
-        y: 2682
-        width: 11
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e59ddb185e5e3b24e8327804e58ef234
-      internalID: 1925342699
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HeroFight_38
+      name: HitUp1
       rect:
         serializedVersion: 2
         x: 604
@@ -539,11 +476,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_40
+      name: HitUp2
       rect:
         serializedVersion: 2
         x: 1090
-        y: 1188
+        y: 1192
         width: 439
         height: 942
       alignment: 9
@@ -560,11 +497,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_41
+      name: HitUp3
       rect:
         serializedVersion: 2
         x: 1594
-        y: 1234
+        y: 1238
         width: 651
         height: 805
       alignment: 9
@@ -581,16 +518,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_42
+      name: HitUp5
       rect:
         serializedVersion: 2
         x: 3128
         y: 1188
         width: 828
-        height: 867
+        height: 906
       alignment: 9
-      pivot: {x: 0.17525905, y: 0.52232945}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.17525877, y: 0.5007385}
+      border: {x: 0, y: 0, z: 5, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -602,15 +539,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_44
+      name: HitUp6
       rect:
         serializedVersion: 2
-        x: 4066
+        x: 4054
         y: 1154
-        width: 281
+        width: 354
         height: 940
       alignment: 9
-      pivot: {x: 0.4923439, y: 0.4702507}
+      pivot: {x: 0.42919093, y: 0.48214176}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -623,7 +560,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_49
+      name: HitUpStart
       rect:
         serializedVersion: 2
         x: 40
@@ -644,7 +581,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_50
+      name: HitUp4
       rect:
         serializedVersion: 2
         x: 2428
@@ -665,15 +602,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_51
+      name: HitUp7
       rect:
         serializedVersion: 2
         x: 4576
-        y: 1183
+        y: 1179
         width: 266
-        height: 630
+        height: 817
       alignment: 9
-      pivot: {x: 0.4919103, y: 0.6673057}
+      pivot: {x: 0.5234246, y: 0.5304905}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -686,7 +623,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_52
+      name: HitLeft6
       rect:
         serializedVersion: 2
         x: 1237
@@ -707,11 +644,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_56
+      name: HitLeft1
       rect:
         serializedVersion: 2
         x: 4037
-        y: 99
+        y: 101
         width: 244
         height: 957
       alignment: 9
@@ -728,7 +665,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_58
+      name: HitLeft7
       rect:
         serializedVersion: 2
         x: 219
@@ -749,7 +686,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_59
+      name: HitLeft5
       rect:
         serializedVersion: 2
         x: 1898
@@ -778,7 +715,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -791,7 +728,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_61
+      name: HitLeft4
       rect:
         serializedVersion: 2
         x: 2423
@@ -812,7 +749,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_62
+      name: HitLeft3
       rect:
         serializedVersion: 2
         x: 3021
@@ -833,7 +770,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_63
+      name: HitLeft2
       rect:
         serializedVersion: 2
         x: 3605
@@ -854,28 +791,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroFight_64
-      rect:
-        serializedVersion: 2
-        x: 4271
-        y: 280
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f4f5355263dda8c46a5e2483ca790ff6
-      internalID: -461120761
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HeroFight_65
+      name: HitLeftStart
       rect:
         serializedVersion: 2
         x: 4413
@@ -906,72 +822,72 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HeroFight_38: 678844190
-      HeroFight_62: -372036157
-      HeroFight_56: 1073966605
-      HeroFight_44: -1804845063
+      HitUp4: -572584936
+      HitRight2: 426744523
       HeroFight_28: 1237122532
-      HeroFight_41: -1091072702
+      HitUp6: -1640298692
+      HitLeft7: 1907978296
       HeroFight_45: -1640298692
       HeroFight_43: 1275356765
-      HeroFight_0: -178739973
       HeroFight_11: -1219288927
-      HeroFight_52: 976136457
-      HeroFight_49: -70868841
       HeroFight_60: -185819010
-      HeroFight_65: -461120761
-      HeroFight_17: 1452343471
+      HitUp2: -1383179894
       HeroFight_55: -786566710
       HeroFight_53: 1738853479
-      HeroFight_13: -1490755549
+      HitUp7: 976136457
       HeroFight_15: -734709012
-      HeroFight_35: 93590773
       HeroFight_48: -842315641
-      HeroFight_63: -1872487143
-      HeroFight_21: 527906986
-      HeroFight_51: -572584936
-      HeroFight_27: -1140646481
+      HeroFight_35: 93590773
       HeroFight_31: 1731471893
-      HeroFight_50: 1521686453
+      HitDown3: 190229098
+      HitLeft5: -185819010
       HeroFight_23: 237429089
-      HeroFight_59: 1907978296
-      HeroFight_24: 916371361
-      HeroFight_58: -828949097
+      HitUp1: 678844190
+      HitUpStart: 1521686453
       HeroFight_64: 1628094759
+      HitLeft6: 1738853479
       HeroFight_5: 2120840336
       HeroFight_57: 511650403
-      HeroFight_61: -800633701
-      HeroFight_4: 2116266126
       HeroFight_46: -743008168
       HeroFight_32: -292701107
-      HeroFight_2: -644363658
-      HeroFight_26: 81477254
+      HitDown5: -1140646481
+      HitLeftStart: 2120840336
+      HitDown6: -1528847226
+      HitUp3: -1091072702
+      HitRight6: 2116266126
       HeroFight_8: -1922046065
+      HitRight7: -1490755549
       HeroFight_30: 827088820
-      HeroFight_9: -874316992
+      HitDownStart: 916371361
       HeroFight_18: 1970505906
+      HitLeft2: 1628094759
       HeroFight_47: -206599731
       HeroFight_6: 1621487395
-      HeroFight_12: -1782903595
+      HitRightStart: -874316992
+      HitRight4: -1782903595
       HeroFight_14: -620331322
       HeroFight_34: -267496882
-      HeroFight_40: -1383179894
+      HitDown1: 1452343471
       HeroFight_54: 466021940
-      HeroFight_42: -920397431
-      HeroFight_1: 426744523
-      HeroFight_3: 1492344289
+      HitDown2: 527906986
+      HitDown4: 81477254
+      HitRight1: -178739973
       HeroFight_10: -180677981
-      HeroFight_19: 190229098
-      HeroFight_29: -1528847226
+      HitLeft3: -1872487143
+      HitLeft1: 511650403
       HeroFight_20: 2062286372
       HeroFight_33: 20361955
       HeroFight_39: -202048694
+      HitRight3: -644363658
+      HitRight5: 1492344289
+      HitUp5: -920397431
       HeroFight_36: 1925342699
-      HeroFight_22: 2071012509
       HeroFight_37: 74087976
       HeroFight_25: -1198904724
       HeroFight_16: -213033779
+      HitLeft4: -372036157
       HeroFight_7: 231761124
+      HitDown7: 2071012509
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

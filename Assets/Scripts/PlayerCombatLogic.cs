@@ -1,18 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCombatLogic : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static Action<string> onAttack;
+
+    private bool isCanAtack = true;
+
+    public void Atack()
     {
-        
+        if(isCanAtack == true)
+        {
+            onAttack?.Invoke("Hit1");
+            isCanAtack = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EndAtack()
     {
-        
+        isCanAtack = true;
     }
 }
