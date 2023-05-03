@@ -256,7 +256,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1263759776}
         m_TargetAssemblyTypeName: PlayerCombatLogic, Assembly-CSharp
-        m_MethodName: Atack
+        m_MethodName: PressOnButtonAtack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
