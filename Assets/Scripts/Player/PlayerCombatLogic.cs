@@ -8,44 +8,36 @@ public class PlayerCombatLogic : MonoBehaviour
     //Надо понять когда нажимается кнопка несколько раз и в зависимости от этого включать анимации.
     public static Action<string> onAttack;
 
-    private int numberOfHit = 0;
-    private bool isCanAtack = true;
-    private bool isAttacking = false;
+    private bool isCanAttack = true;
+
+    [HideInInspector]
+    public int numberOfHit = 0;
 
     public void PressOnButtonAtack()
     {
-        numberOfHit++;
-
-        Attack();
-        if(numberOfHit > 3) numberOfHit = 0;
-            
-    }
-
-    private void Attack()
-    {
-        if (isCanAtack == true)
+        if(isCanAttack == true)
         {
+            numberOfHit++;
+
             onAttack?.Invoke("Hit" + numberOfHit.ToString());
-            isCanAtack = false;
-            isAttacking = true;
-        }
-
+            if (numberOfHit >= 3) numberOfHit = 0;
+            isCanAttack = false;
+        }   
     }
 
-    private IEnumerator OnAnimationEnd()
+    private void AttackEnd(bool isCan) //Жесткая зависимость isCanAttack, конца анимации и возможностью аттаковать
     {
-        yield return new WaitForSeconds(0.5f);
-
-
+        if(numberOfHit <=1)
+        isCanAttack = isCan;
     }
 
-    private void ComboActivity()
+    private void OnEnable()
     {
-
+        PlayerAnimationLogic.onAttackEnd += AttackEnd;
     }
 
-    public void EndAtack()
+    private void OnDisable()
     {
-        isCanAtack = true;
+        PlayerAnimationLogic.onAttackEnd -= AttackEnd;
     }
 }

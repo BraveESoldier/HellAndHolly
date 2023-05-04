@@ -4,19 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent (typeof(Animator))]
 public class Player : CharacterBase
 {
     [SerializeField] private int _health;
     [SerializeField] private string _name;
-    [SerializeField] private Joystick _stick;
 
-    private string direction;
+    private string _playerDirection;
     private bool isCanMoving = true;
 
-    private Animator animator;
     private PlayerMovementLogic PML;
     private PlayerCombatLogic PCL;
+    private PlayerAnimationLogic PAL;
 
 
 
@@ -25,10 +23,9 @@ public class Player : CharacterBase
         Health = _health;
         Name = _name;
 
-        animator = GetComponent<Animator>();
         PML = GetComponent<PlayerMovementLogic>();
         PCL = GetComponent<PlayerCombatLogic>();
-        Debug.Log(Name);
+        PAL = GetComponent<PlayerAnimationLogic>();
     }
 
     public override void Die()
@@ -36,96 +33,26 @@ public class Player : CharacterBase
         Debug.Log("Player dies");
     }
 
-    public override void Movement()
+    public override void Movement() 
     {
-        Vector2 forceStick = _stick.Direction.normalized;
-        if(isCanMoving == true)
+        if(isCanMoving == true && PCL.numberOfHit <= 1)
         {
-            if (forceStick != Vector2.zero)
-            {
-                isMoving = true;
-                PML.Move(forceStick);
-
-                // Установка направлениz
-                SetDirection(forceStick);
-                // Установка анимации направления
-                SetAnimation();
-            }
-            else //Проблема вызова каждый кадр или не проблема?
-            {
-                PML.Move(Vector2.zero);
-                isMoving = false;
-            }
+            PAL.SetAnimation(isMoving,_playerDirection);
+            _playerDirection = PML.direction;
+            isMoving = PML.MovementLogic();
         }
-        else if (isCanMoving == false) isMoving = false;
+        //else if(isCanMoving == false) 
+    }
+
+    private void Attack(string numberOfHit)
+    {
+        isCanMoving = false;
+        PAL.SetAnimationAttack(numberOfHit, _playerDirection);
     }
 
     public override void TakeDamage(int damage)
     {
 
-    }
-
-    public void SetAnimation() //проблема вызова каждый кадр МАШИНА СОСТОЯНИЙ????
-    {
-        string currentAnim;
-        if (isMoving == true)
-        {
-            currentAnim = "Walk" + direction;
-            animator.Play(currentAnim);
-        }
-        else 
-        {
-            currentAnim = "Idle" + direction;
-            animator.Play(currentAnim);
-        }
-        Debug.Log(currentAnim);
-    }
-
-    public void SetAnimation(string hitVersion)
-    {
-        isCanMoving = false;
-        string currentAnim = hitVersion + direction;
-        animator.Play(currentAnim); //Start anim of hit
-
-        StartCoroutine(OnAnimationEnd()); //end anim of hit
-    }
-
-    private IEnumerator OnAnimationEnd() //Cour for understanding about end amin
-    {
-        yield return new WaitForSeconds(0.5f); //Костыл, надо вернуть время анимации чтобы корутина была универсальной
-
-        isCanMoving = true;
-        SetAnimation();
-        PCL.EndAtack();
-        //yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo(0).length);
-    }
-
-    public void SetDirection(Vector2 force)
-    {
-        //if (direction == Vector2.zero)
-        //{
-        //    IsMoving = false;
-        //    return;
-        //}
-
-        float angle = Mathf.Atan2(force.y, force.x) * Mathf.Rad2Deg;
-
-        if (angle > -45 && angle <= 45)
-        {
-            direction = "Right";
-        }
-        else if (angle > 45 && angle <= 135)
-        {
-            direction = "Up";
-        }
-        else if (angle > 135 || angle <= -135)
-        {
-            direction = "Left";
-        }
-        else
-        {
-            direction = "Down";
-        }
     }
 
 
@@ -134,13 +61,21 @@ public class Player : CharacterBase
         Movement();
     }
 
+    private void AttactEnd(bool isCan)
+    {
+        isCanMoving = isCan;
+    }
+
     private void OnEnable()
     {
-        PlayerCombatLogic.onAttack += SetAnimation;
+        PlayerCombatLogic.onAttack += Attack;
+        PlayerAnimationLogic.onAttackEnd += AttactEnd;
     }
 
     private void OnDisable()
     {
-        PlayerCombatLogic.onAttack -= SetAnimation;
+        PlayerCombatLogic.onAttack -= Attack;
+        PlayerAnimationLogic.onAttackEnd -= AttactEnd;
     }
+
 }
