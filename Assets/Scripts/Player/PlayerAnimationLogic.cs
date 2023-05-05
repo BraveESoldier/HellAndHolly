@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerAnimationLogic : MonoBehaviour
@@ -22,24 +23,37 @@ public class PlayerAnimationLogic : MonoBehaviour
             currentAnim = "Idle" + direction;
             animator.Play(currentAnim);
         }
-        //Debug.Log(currentAnim);
     }
 
     public void SetAnimationAttack(string hitVersion,string direction)
     {
         string currentAnim = hitVersion + direction;
         animator.Play(currentAnim); //Start anim of hit
-        //Debug.Log(currentAnim);
 
-        StartCoroutine(OnAnimationEnd(0.5f));
+        StartCoroutine(OnAnimationEnd(FindAnimationTime(currentAnim)));
     }
 
-
-    private IEnumerator OnAnimationEnd(float animScore) //Cour for understanding about end amin
+    private float FindAnimationTime(string clipName)
     {
-        yield return new WaitForSeconds(animScore); //Костыл, надо вернуть время анимации чтобы корутина была универсальной
+        AnimationClip clip = animator.runtimeAnimatorController.animationClips
+            .FirstOrDefault(c => c.name.Equals(clipName));
+
+        if (clip != null)
+        {
+            return clip.length;
+        }
+        else
+        {
+            Debug.LogError($"Animation '{clipName}' not found");
+            return 0f;
+        }
+    }
+
+    IEnumerator OnAnimationEnd(float duration) //Cour for understanding about end amin
+    {
+        Debug.Log(duration);
+        yield return new WaitForSeconds(duration);
 
         onAnimationAttackEnd?.Invoke(true);
-        //yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo(0).length);
     }
 }

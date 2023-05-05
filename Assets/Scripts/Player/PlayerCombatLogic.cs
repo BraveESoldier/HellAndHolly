@@ -5,47 +5,63 @@ using UnityEngine;
 
 public class PlayerCombatLogic : MonoBehaviour
 {
+    private IButtonClickTracker _buttonClickTracker;
+
     //Надо понять когда нажимается кнопка несколько раз и в зависимости от этого включать анимации.
     public static Action<string> onAttack;
     public static Action<bool> onAttackEnd;
 
-    private bool isCanAttack = true;
-    private bool itIsCombo = false;
+    private bool isCanStartAttack = true;
+    private bool itIsCombo1 = false;
+    private bool itIsCombo2 = false;
 
-    [HideInInspector]
-    private int numberOfHit = 0;
-
-    private void Attack()//не нравиттся
+    private void Awake()
     {
-        if (isCanAttack == true)
-        {
-            numberOfHit++;
+        _buttonClickTracker = new ButtonClickTracker();
+    }
 
-            onAttack?.Invoke("Hit" + numberOfHit.ToString());
-            isCanAttack = false;
-        }
-        else if (numberOfHit > 1)
+    private void Attack(int numberOfHit)//не нравиттся
+    {
+
+        onAttack?.Invoke("Hit" + numberOfHit.ToString());
+        isCanStartAttack = false;
+    }
+
+    public void PressOnButtonAttack()
+    {
+        _buttonClickTracker.OnButtonClick();
+        int numberOfClicks = _buttonClickTracker.GetNumberOfClicks();
+
+        if (numberOfClicks == 1)
         {
-            itIsCombo = true;
+            Attack(1);
+        }
+        else if (numberOfClicks == 2)
+        {
+            itIsCombo1 = true;
+        }
+        else if (numberOfClicks == 3)
+        {
+            itIsCombo2 = true;
         }
     }
 
-    public void PressOnButtonAtack()
+    private void AnimationAttackEnd(bool isCan)
     {
-        Attack();
-    }
-
-    private void AnimationAttackEnd(bool isCan) //Жесткая зависимость isCanAttack, конца анимации и возможностью аттаковать
-    {
-        if (itIsCombo == true)
+        if (itIsCombo1 == true)
         {
-            Attack();
+            Attack(2);
+            itIsCombo1 = false;
+        }
+        else if(itIsCombo2 == true)
+        {
+            Attack(3);
+            itIsCombo2 = false;
         }
         else
         {
-            isCanAttack = isCan;
+            isCanStartAttack = isCan;
             onAttackEnd?.Invoke(true);
-            numberOfHit = 0;
         }
     }
 
