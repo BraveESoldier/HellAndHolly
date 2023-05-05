@@ -12,6 +12,7 @@ public class Player : CharacterBase
     private string _playerDirection;
     private bool isCanMoving = true;
 
+    //ѕо хорошему надо использовать конструкторы
     private PlayerMovementLogic PML;
     private PlayerCombatLogic PCL;
     private PlayerAnimationLogic PAL;
@@ -35,13 +36,12 @@ public class Player : CharacterBase
 
     public override void Movement() 
     {
-        if(isCanMoving == true && PCL.numberOfHit <= 1)
+        if(isCanMoving == true)
         {
             PAL.SetAnimation(isMoving,_playerDirection);
             _playerDirection = PML.direction;
             isMoving = PML.MovementLogic();
         }
-        //else if(isCanMoving == false) 
     }
 
     private void Attack(string numberOfHit)
@@ -69,13 +69,13 @@ public class Player : CharacterBase
     private void OnEnable()
     {
         PlayerCombatLogic.onAttack += Attack;
-        PlayerAnimationLogic.onAttackEnd += AttactEnd;
+        PlayerCombatLogic.onAttackEnd += AttactEnd;
     }
 
     private void OnDisable()
     {
         PlayerCombatLogic.onAttack -= Attack;
-        PlayerAnimationLogic.onAttackEnd -= AttactEnd;
+        PlayerCombatLogic.onAttackEnd -= AttactEnd;
     }
 
 }

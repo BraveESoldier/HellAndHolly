@@ -7,7 +7,7 @@ public class PlayerAnimationLogic : MonoBehaviour
 {
     [SerializeField] private Animator animator;
 
-    public static Action<bool> onAttackEnd;
+    public static Action<bool> onAnimationAttackEnd;
 
     public void SetAnimation(bool isMoving, string direction)
     {
@@ -39,7 +39,7 @@ public class PlayerAnimationLogic : MonoBehaviour
     {
         yield return new WaitForSeconds(animScore); //Костыл, надо вернуть время анимации чтобы корутина была универсальной
 
-        onAttackEnd?.Invoke(true);
+        onAnimationAttackEnd?.Invoke(true);
         //yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo(0).length);
     }
 }
