@@ -44,10 +44,12 @@ public class Player : CharacterBase
         }
     }
 
-    private void Attack(string numberOfHit)
+    private string Attack(string numberOfHit)
     {
         isCanMoving = false;
         PAL.SetAnimationAttack(numberOfHit, _playerDirection);
+        return _playerDirection;
+
     }
 
     public override void TakeDamage(int damage)

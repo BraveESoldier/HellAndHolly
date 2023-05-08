@@ -5,13 +5,16 @@ using UnityEngine;
 
 public class PlayerCombatLogic : MonoBehaviour
 {
+    [SerializeField] private Transform[] _attackPoints;
+    [SerializeField] private LayerMask _enemyLayers;
+
     private IButtonClickTracker _buttonClickTracker;
 
-    //Надо понять когда нажимается кнопка несколько раз и в зависимости от этого включать анимации.
-    public static Action<string> onAttack;
+    public static Func<string,string> onAttack;
     public static Action<bool> onAttackEnd;
 
-    private bool isCanStartAttack = true;
+    private string _currentDirectionAttack;
+    private float _attackRange = 1.5f;
     private bool itIsCombo1 = false;
     private bool itIsCombo2 = false;
 
@@ -20,11 +23,27 @@ public class PlayerCombatLogic : MonoBehaviour
         _buttonClickTracker = new ButtonClickTracker();
     }
 
-    private void Attack(int numberOfHit)//не нравиттся
+    private void Attack(int numberOfHit)
     {
+        _currentDirectionAttack = onAttack?.Invoke("Hit" + numberOfHit.ToString());
 
-        onAttack?.Invoke("Hit" + numberOfHit.ToString());
-        isCanStartAttack = false;
+        //Detect enemy coll
+        Collider2D[] hitEnemys = Physics2D.
+            OverlapCircleAll(_attackPoints[UnderstandingDirectionAttack(_currentDirectionAttack)].position, _attackRange, _enemyLayers);
+        
+
+        foreach (Collider2D enemy in hitEnemys)
+        {
+            enemy.GetComponent<EnemyTest>().TakeDamage(20);
+        }
+    }
+
+    private void OnDrawGizmosSelected() //Gizm
+    {
+        Gizmos.DrawWireSphere(_attackPoints[0].position, _attackRange);
+        Gizmos.DrawWireSphere(_attackPoints[1].position, _attackRange);
+        Gizmos.DrawWireSphere(_attackPoints[2].position, _attackRange);
+        Gizmos.DrawWireSphere(_attackPoints[3].position, _attackRange);
     }
 
     public void PressOnButtonAttack()
@@ -46,7 +65,7 @@ public class PlayerCombatLogic : MonoBehaviour
         }
     }
 
-    private void AnimationAttackEnd(bool isCan)
+    private void AnimationAttackEnd(bool isCan) //Проблема с анимацией если закликивать Button
     {
         if (itIsCombo1 == true)
         {
@@ -60,9 +79,17 @@ public class PlayerCombatLogic : MonoBehaviour
         }
         else
         {
-            isCanStartAttack = isCan;
             onAttackEnd?.Invoke(true);
         }
+    }
+
+    private int UnderstandingDirectionAttack(string direction)
+    {
+        if (direction == "Left") return 0;
+        else if (direction == "Right") return 1;
+        else if (direction == "Up") return 2;
+        else if (direction == "Down") return 3;
+        else return 0;
     }
 
     private void OnEnable()
