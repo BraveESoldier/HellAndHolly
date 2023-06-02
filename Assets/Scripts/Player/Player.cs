@@ -31,6 +31,10 @@ public class Player : CharacterBase
 
     public override void Die()
     {
+        if (Health <= 0)
+        {
+            
+        }
         Debug.Log("Player dies");
     }
 
@@ -38,9 +42,9 @@ public class Player : CharacterBase
     {
         if(isCanMoving == true)
         {
-            PAL.SetAnimation(isMoving,_playerDirection);
+            PAL.SetAnimation(IsMoving,_playerDirection);
             _playerDirection = PML.direction;
-            isMoving = PML.MovementLogic();
+            IsMoving = PML.MovementLogic();
         }
     }
 

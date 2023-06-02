@@ -34,7 +34,7 @@ public class PlayerCombatLogic : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemys)
         {
-            enemy.GetComponent<EnemyTest>().TakeDamage(20);
+            enemy.GetComponent<EnemyCharacter>().TakeDamage(20);
         }
     }
 
@@ -63,6 +63,7 @@ public class PlayerCombatLogic : MonoBehaviour
         {
             itIsCombo2 = true;
         }
+        else return;
     }
 
     private void AnimationAttackEnd(bool isCan) //ѕроблема с анимацией если закликивать Button

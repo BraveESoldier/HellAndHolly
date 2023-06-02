@@ -23,10 +23,10 @@ public abstract class CharacterBase : MonoBehaviour, ICharacter, ICombatant, IMo
         set { isMoving = value; }
     }
 
-    protected int health;
-    protected bool isMoving;
-    protected bool isDead;
-    protected string name;
+    private int health;
+    private bool isMoving;
+    private bool isDead;
+    private string name;
 
     public abstract void TakeDamage(int damage);
     public abstract void Movement();
