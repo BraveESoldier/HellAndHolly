@@ -49,7 +49,6 @@ public class PlayerMovementLogic : MonoBehaviour
             Move(Vector2.zero);
             return false;
         }
-
     }
 
     public void Move(Vector2 forceStick)

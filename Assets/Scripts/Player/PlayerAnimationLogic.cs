@@ -10,6 +10,13 @@ public class PlayerAnimationLogic : MonoBehaviour
 
     public static Action<bool> onAnimationAttackEnd;
 
+    private FindAnimationTimes _findAnimTime;
+
+    private void Awake()
+    {
+        _findAnimTime = new FindAnimationTimes();
+    }
+
     public void SetAnimation(bool isMoving, string direction)
     {
         string currentAnim;
@@ -30,10 +37,21 @@ public class PlayerAnimationLogic : MonoBehaviour
         string currentAnim = hitVersion + direction;
         animator.Play(currentAnim); //Start anim of hit
 
-        StartCoroutine(OnAnimationEnd(FindAnimationTime(currentAnim)));
+        StartCoroutine(OnAnimationEnd(_findAnimTime.Find(animator,currentAnim)));
     }
 
-    private float FindAnimationTime(string clipName)
+    IEnumerator OnAnimationEnd(float duration) //Cour for understanding about end amin
+    {
+        Debug.Log("Coroutine = " + duration);
+        yield return new WaitForSeconds(duration);
+
+        onAnimationAttackEnd?.Invoke(true);
+    }
+}
+
+public class FindAnimationTimes: MonoBehaviour
+{
+    public float Find(Animator animator,string clipName)
     {
         AnimationClip clip = animator.runtimeAnimatorController.animationClips
             .FirstOrDefault(c => c.name.Equals(clipName));
@@ -48,12 +66,5 @@ public class PlayerAnimationLogic : MonoBehaviour
             return 0f;
         }
     }
-
-    IEnumerator OnAnimationEnd(float duration) //Cour for understanding about end amin
-    {
-        Debug.Log(duration);
-        yield return new WaitForSeconds(duration);
-
-        onAnimationAttackEnd?.Invoke(true);
-    }
 }
+

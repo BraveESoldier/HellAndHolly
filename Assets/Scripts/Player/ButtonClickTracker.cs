@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class ButtonClickTracker : IButtonClickTracker
 {
-    private int _numberOfClicks;
+    private int _numberOfClicks = 1;
     private float _lastClickTime;
 
-    public void OnButtonClick()
+    public void OnButtonClick(float animTime)
     {
         float currentTime = Time.time;
 
-        if (currentTime - _lastClickTime <= 0.5f)
+        if (currentTime - _lastClickTime <= animTime)
         {
             _numberOfClicks++;
         }
@@ -17,7 +17,6 @@ public class ButtonClickTracker : IButtonClickTracker
         {
             _numberOfClicks = 1;
         }
-
         _lastClickTime = currentTime;
     }
 
@@ -29,6 +28,6 @@ public class ButtonClickTracker : IButtonClickTracker
 
 public interface IButtonClickTracker
 {
-    void OnButtonClick();
+    void OnButtonClick(float time);
     int GetNumberOfClicks();
 }

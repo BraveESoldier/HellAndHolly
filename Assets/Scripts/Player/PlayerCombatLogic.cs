@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCombatLogic : MonoBehaviour
 {
     [SerializeField] private Transform[] _attackPoints;
     [SerializeField] private LayerMask _enemyLayers;
+    [SerializeField] private Button _button;
 
     private IButtonClickTracker _buttonClickTracker;
 
@@ -17,6 +19,7 @@ public class PlayerCombatLogic : MonoBehaviour
     private float _attackRange = 1.5f;
     private bool itIsCombo1 = false;
     private bool itIsCombo2 = false;
+
 
     private void Awake()
     {
@@ -48,7 +51,6 @@ public class PlayerCombatLogic : MonoBehaviour
 
     public void PressOnButtonAttack()
     {
-        _buttonClickTracker.OnButtonClick();
         int numberOfClicks = _buttonClickTracker.GetNumberOfClicks();
 
         if (numberOfClicks == 1)
@@ -63,10 +65,10 @@ public class PlayerCombatLogic : MonoBehaviour
         {
             itIsCombo2 = true;
         }
-        else return;
+        _buttonClickTracker.OnButtonClick(0.52f);
     }
 
-    private void AnimationAttackEnd(bool isCan) //ѕроблема с анимацией если закликивать Button
+    private void AnimationAttackEnd(bool isCan) 
     {
         if (itIsCombo1 == true)
         {
@@ -75,12 +77,15 @@ public class PlayerCombatLogic : MonoBehaviour
         }
         else if(itIsCombo2 == true)
         {
+            _button.enabled = false; //problem with button time enabled s0 need use FindAnimationTime
             Attack(3);
             itIsCombo2 = false;
         }
         else
         {
+            Debug.Log(_buttonClickTracker.GetNumberOfClicks());
             onAttackEnd?.Invoke(true);
+            _button.enabled = true;
         }
     }
 

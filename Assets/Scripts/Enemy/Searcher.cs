@@ -5,6 +5,7 @@ public interface IDetector
     void SetTarget(string tag);
     bool DetectObject(float detectionRange, Transform seeker);
     string DeterminePosition(Transform seeker);
+    Vector3 ReturnTargetPosition();
 }
 
 public class Searcher: MonoBehaviour, IDetector
@@ -43,5 +44,10 @@ public class Searcher: MonoBehaviour, IDetector
         {
             return "Down";
         }
+    }
+
+    public Vector3 ReturnTargetPosition()
+    {
+        return target.transform.position;
     }
 }
