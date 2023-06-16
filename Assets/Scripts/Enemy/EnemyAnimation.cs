@@ -24,9 +24,14 @@ public class EnemyAnimation : MonoBehaviour
         }
     }
 
-    public void SetAnimationAttack()
+    public void SetAnimation(string direction)
     {
+        _animator.Play("Hit" + direction);
+    }
 
+    public void SetAnimationDie()
+    {
+        Debug.Log("IM DIE");
     }
 
 }

@@ -11,6 +11,11 @@ public class EnemyMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
+    public void Stop()
+    {
+        _rb.velocity = Vector3.zero;
+    }
+
     public void MoveTowards(Vector3 targetPosition)
     {
         Vector2 moveDirection = (targetPosition - transform.position).normalized;

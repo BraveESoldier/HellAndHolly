@@ -803,7 +803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1108593896
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -999,7 +999,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1209969363
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1112,7 +1112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54ce3483533be494885367b3c23dba07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectRange: 10
+  _attackRange: 3
+  _detectRange: 10
+  _health: 160
 --- !u!95 &1209969369
 Animator:
   serializedVersion: 4
@@ -1400,8 +1402,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.025008619, y: -0.8233063}
-  m_Size: {x: 1.3097664, y: 2.152391}
+  m_Offset: {x: 0.025008619, y: -0.9601841}
+  m_Size: {x: 1.3097664, y: 1.8786354}
   m_Direction: 0
 --- !u!114 &1263759778
 MonoBehaviour:

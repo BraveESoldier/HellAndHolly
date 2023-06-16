@@ -4,52 +4,20 @@ using UnityEngine;
 
 public class Bloodhound : EnemyCharacter
 {
-    [SerializeField] private float detectRange = 10;
+    [SerializeField] private float _attackRange = 2;
+    [SerializeField] private float _detectRange = 10;
+    [SerializeField] private int _health = 160;
 
-    private EnemyAnimation EA;
-    private EnemyCombat EC;
-    private EnemyMovement EM;
-
-    private string _direction = "Left";
-    private Vector3 _startPos;
-
-    private IDetector _searher;
-
-    private void Awake()
+    private void Start()
     {
-        _searher = new Searcher();
-        _searher.SetTarget("Player");
-        EA = GetComponent<EnemyAnimation>();
-        EC = GetComponent<EnemyCombat>();
-        EM = GetComponent<EnemyMovement>(); 
-        _startPos = this.transform.position; //убрать зависимость при подключении Zenject
-    }
-    
-
-
-    private void FixedUpdate()
-    {
-        if (_searher.DetectObject(detectRange,this.transform))
-        {
-            _direction = _searher.DeterminePosition(this.transform);
-            Movement();
-
-        }
-        
+        SetSetting();
     }
 
-    private void IdleAnimation()
+    private void SetSetting()
     {
-        EA.SetAnimation(false, _direction);
+        attackRange = _attackRange;
+        detectRange = _detectRange;
+        Health = _health;
     }
-
-
-    public override void Movement()
-    {
-        Vector3 target = _searher.ReturnTargetPosition();
-        EM.MoveTowards(target);
-        EA.SetAnimation(true, _direction);
-    }
-
 
 }
